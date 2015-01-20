@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css selector</title>
+    
+    <script src="js/jquery-2.1.3.min.js"></script>
+    
+    <style>
+        .depart{
+            background-color: #2a7e11;
+            height: 30px;
+            width: 120px;
+            text-align: center;
+            margin: 2px;
+            padding-top: 10px;
+            cursor: pointer;
+        }
+        
+        .th{
+            background-color: #3f85c1;
+            height: 26px;
+            width: 120px;
+            text-align: center;
+            margin: 2px;
+            padding-top: 10px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        
+        #closeAll{
+            background-color: #b6c732;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+    
+    <script>
+        
+        $(document).ready(function(){
+            
+            //把所有的老師先隱藏起來
+            $(".departWrapper").slideUp(0);
+            
+            //掛事件給.depart
+            $(".depart").click(function(){                
+                //alert($(this).text());
+                
+                //顯示那些老師
+                $(this).next().slideToggle(500);
+            });
+            
+            $("#closeAll").click(function(){
+                $(".departWrapper").slideUp(500);
+            });
+        });
+        
+    </script>
+    
+    
+</head>
+<body>
+    <div id="closeAll">-</div>
+    <div class="depart">資訊管理管系</div>
+    <div class="departWrapper">
+        <div class="th">陳東柏</div>
+        <div class="th">陳鵬文</div>
+        <div class="th">劉一凡</div>
+        <div class="th">葉乙璇</div>
+    </div>
+    
+    <div class="depart">工業管理系</div>
+    <div class="departWrapper"></div>
+    
+    <div class="depart">護理系</div>
+    <div class="departWrapper"></div>
+    
+    <div class="depart">行銷系</div>
+    <div class="departWrapper">
+        <div class="th">陳東柏</div>
+        <div class="th">陳鵬文</div>
+        <div class="th">劉一凡</div>
+        <div class="th">葉乙璇</div>
+    </div>
+
+
+</body>
+</html>
