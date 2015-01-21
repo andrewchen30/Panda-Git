@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-2.1.3.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({ //get,post,none
+                type: "get",
+                url: "json_names.php",
+                data: {
+                    id: 11
+                },
+                success: function (data) {
+                    $("body").append(data);
+                    
+                    var info = JSON.parse(data);
+                    alert(info[0]["Name"]);
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>
+
+
+
+
+<!--
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "json_names.php",
+                context: $("div")
+            }).done(function (data) {
+                $(this).append(data);
+            });
+        });
+    </script>
+-->
