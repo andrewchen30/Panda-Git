@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script src="js/jquery-2.1.3.min.js"></script>
+</head>
+
+<body>
+	<script>
+		$(document).ready(function () {
+
+			//倒數記時器
+			setTimeout(function () {
+				alert("2s time out");
+			}, 2000);
+
+			//定時
+			setInterval(function () {
+				$("body").append("*");
+			}, 500);
+
+		});
+	</script>
+</body>
+
+</html>

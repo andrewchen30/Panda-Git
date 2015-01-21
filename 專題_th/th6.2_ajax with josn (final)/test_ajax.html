@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery-2.1.3.min.js"></script>
+</head>
+
+<body>
+
+	<script>
+		$(document).ready(function () {
+			$.ajax({ //get,post,none
+				type: "get",
+				url: "json_names.php",
+				data: {
+					id: 11
+				},
+				success: function (data) {
+
+					var info = JSON.parse(data);
+					var thInfo = '<div class="th">@thName</div>';
+					//alert(info[0]["Name"]);
+
+					for (var i = 0; i < info.length; i++) {
+						$("div.show").append(thInfo.replace('@thName', info[i]["Name"]));
+					}
+				}
+			});
+			return false;
+		});
+	</script>
+	<div class="show"></div>
+</body>
+
+</html>
+
+
+
+
+<!--
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "json_names.php",
+                context: $("div")
+            }).done(function (data) {
+                $(this).append(data);
+            });
+        });
+    </script>
+-->
