@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		function getInfo() {
+			var s = "";
+			s += " \n網頁可見區域寬：" + document.body.clientWidth;
+			s += " \n網頁可見區域高：" + document.body.clientHeight;
+			s += " \n網頁可見區域寬：" + document.body.offsetWidth + " (包括邊線和捲軸的寬)";
+			s += " \n網頁可見區域高：" + document.body.offsetHeight + " (包括邊線的寬)";
+			s += " \n網頁正文全文寬：" + document.body.scrollWidth;
+			s += " \n網頁正文全文高：" + document.body.scrollHeight;
+			s += " \n網頁被卷去的高(ff)：" + document.body.scrollTop;
+			s += " \n網頁被卷去的高(ie)：" + document.documentElement.scrollTop;
+			s += " \n網頁被卷去的左：" + document.body.scrollLeft;
+			s += " \n網頁正文部分上：" + window.screenTop;
+			s += " \n網頁正文部分左：" + window.screenLeft;
+			s += " \n螢幕解析度的高：" + window.screen.height;
+			s += " \n螢幕解析度的寬：" + window.screen.width;
+			s += " \n螢幕可用工作區高度：" + window.screen.availHeight;
+			s += " \n螢幕可用工作區寬度：" + window.screen.availWidth;
+			s += " \n你的螢幕設置是 " + window.screen.colorDepth + " 位彩色";
+			s += " \n你的螢幕設置 " + window.screen.deviceXDPI + " 圖元/英寸";
+			alert (s);
+		}
+		getInfo();
+	</script>
+</body>
+
+</html>
