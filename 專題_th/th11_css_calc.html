@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css calc</title>
+	
+	<style>
+		body{
+			background-color: #333;
+			margin: 0px;
+		}
+		.treeview{
+			float: left;
+			background-color:#2a8d21;
+			height: 900px;
+			width: 250px;
+		}
+		.show{
+			float: left;
+			background-color:#2091ac;
+			height: 900px;
+			
+			/*重點在這裡～～！*/
+			width: calc(100% - 260px); 
+			/*重點在這裡～～！*/
+		}
+	</style>
+	
+</head>
+<body>
+	<div class="treeview"></div>
+	<div class="show"></div>
+</body>
+</html>
