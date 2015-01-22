@@ -1,0 +1,42 @@
+ul#info {
+	display: none;
+}
+div#waterfall {
+	width: 85%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 12px;
+	height: 2000px;
+	/*	background-color:#b76161;*/
+}
+div.table {
+	float: left;
+	background-color: #909090;
+	margin: 6px;
+	border-bottom: 3px solid #727272;
+	border-right: 3px solid #727272;
+	border-radius: 4px;
+	padding: 4px;
+}
+
+.inside{
+	width: 96%;
+	margin-left: 2%;
+}
+.table>img{
+	margin-top: 2%;
+	border-radius: 4px;
+}
+
+.table>div.info{
+/*	background-color: #46a230;*/
+	margin-top: 6px;
+	margin-bottom: 8px;
+	border-top: 3px solid #b9b2b2;
+	padding-top: 8px;
+}
+
+.col{
+	width: 25%;
+	float: left;
+}
