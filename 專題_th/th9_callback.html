@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>function callback</title>
+	
+	<script src="js/jquery-2.1.3.min.js"></script>
+	
+	<style>
+		body{
+			background-color: #333;
+		}
+		.show{
+			width: 200px;
+			margin-left: auto;
+			margin-right: auto;
+			color: white;
+			text-align: center;
+			cursor: pointer;
+		}
+		#one{
+			background-color: rgba(149, 234, 96, 0.67);
+		}
+		#two{
+			background-color: rgba(234, 96, 96, 0.67);
+		}
+	</style>
+	
+	<script>
+		$(document).ready(function(){
+			$("div").click(function(){
+				$("#two").slideUp('fast', function(){
+					$("#one").slideUp('fast');//1
+				});//2    
+			});
+		});
+	</script>
+	
+</head>
+<body>
+	<div id="one" class="show">
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+	</div>
+	<div id="two" class="show">
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+		<p>---------testing div---------</p>
+	</div>
+</body>
+</html>
