@@ -25,7 +25,10 @@
 			$("div").click(function(){
 				$(".show").animate({
 					marginLeft: "+=500px"
-				},1000 , "swing");
+				}, 1000, "swing", function(){
+					alert("finish");
+				});
+			
 				
 				$(".show2").animate({
 					marginLeft: "+=500px"		
