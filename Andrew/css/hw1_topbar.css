@@ -1,0 +1,51 @@
+body {
+	padding-top: 70px;
+}
+#topbar {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 60px;
+	background-color: #35763a;
+	border-bottom: 2px solid #265529;
+	box-shadow: 2px 1px 1px #29362a;
+}
+#tb-title {
+	float: left;
+	width: 450px;
+	height: 60px;
+}
+#tb-title>h1 {
+	margin-top: 5%;
+	padding-left: 20px;
+	color: white;
+}
+#tb-padding {
+	float: left;
+	width: calc(100% - 660px);
+	height: 60px;
+}
+#tb-name {
+	float: left;
+	width: 144px;
+	height: 60px;
+	text-align: right;
+	padding-right: 6px;
+}
+#tb-name>h3:first-child {
+	margin-top: 20px;
+}
+#tb-name>h3 {
+	height: 20px;
+	margin: 0px;
+	color: #c8d8c8;
+	font-weight: bolder;
+}
+#tb-pic {
+	float: left;
+	width: 60px;
+}
+#tb-pic>img {
+	height: calc(60px - 6px);
+	margin: 3px;
+}

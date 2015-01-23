@@ -1,18 +1,24 @@
 $(document).ready(function () {
 
 	var hi = [0, 0, 0, 0]; //col height
-	
+
+
+	//controls
 	var shi = window.screen.availHeight;
 	var flag = 0;
 	var adding = true;
 	var speed = 300;
+	var isBigBar = true;
 
 	//model
 	var table = '<div class="table"><img src="@pic" alt="" class="inside"><div class="info inside">@info</div></div>';
 
+
+	//info list
 	var piclist = $("ul#info>img");
 	var infolist = $("ul#info>li.info");
-	
+
+	//set original hi
 	$("div#waterfall").height(shi + 400);
 
 
@@ -54,21 +60,61 @@ $(document).ready(function () {
 	//check needed
 	function checkNeedMore() {
 		shi = window.screen.availHeight + document.body.scrollTop;
-		
+
 		if ((hi[getMin()] + 400) <= shi) {
 			return true;
-		}else{
-			$("div#waterfall").height(shi + 400);
+		} else {
+			$("div#waterfall").height(shi + window.screen.availHeight);
 		}
 	}
 
-	addTable(0);
+	function topBarSize(ctrl) {
+		
+		var add = '+=16px';
+		var sub = '-=16px';
+		
+		if(ctrl === false){
+			var tmp = sub;
+			sub = add;
+			add = tmp;
+		}
+		
+		//bar 
+		$("#topbar").animate({
+			marginTop: sub
+		}, 200, 'swing');
+		//img
+		$("#tb-pic>img").animate({
+			marginTop: add,
+			width: sub,
+			height: sub
+		}, 200, 'swing');
+		//div
+		$("#tb-pic").animate({
+			width: sub,
+			height: sub
+		}, 200, 'swing');
+		//name
+		$("#tb-name").animate({
+			width: add
+		}, 200, 'swing');
+	}
 
+	//scroll envent
 	$(document).scroll(function () {
 		if (checkNeedMore() && (adding == false)) {
 			adding = true;
 			addTable(flag);
 		}
+
+		if ((document.body.scrollTop > 400) && isBigBar) {
+			topBarSize(isBigBar);
+			isBigBar = false;
+		} else if ((document.body.scrollTop < 400) && isBigBar == false) {
+			topBarSize(isBigBar);
+			isBigBar = true;
+		}
 	});
 
+	addTable(0); // init show pic
 });
