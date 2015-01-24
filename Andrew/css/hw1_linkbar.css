@@ -1,0 +1,33 @@
+#linkbar {
+	height: 40px;
+	width: 100%;
+	padding-top: 4px;
+	padding-left: 200px;
+	background-color: #228130;
+}
+
+#linkbarInfo {
+	opacity: 0;
+}
+
+.root {
+	margin-top: 8px;
+	font-size: 22px;
+	float: left;
+	width: 100px;
+	margin-left: 12px;
+	color: white;
+	text-align: center;
+}
+
+.child{
+	margin-top: 10px;
+	text-align: center;
+	position: relative;
+	top: 10px;
+	font-size: 18px;
+	float: left;
+	width: 100px;
+	margin-left: 12px;
+	color: white;
+}

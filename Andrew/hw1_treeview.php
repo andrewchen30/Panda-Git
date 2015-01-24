@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>css selector</title>
+    <title>tree view</title>
     
-    <link rel="stylesheet" href="css/hw2_treeview.css">
+    <link rel="stylesheet" href="css/hw1_treeview.css">
     
     <script src="../jquery-2.1.3.min.js"></script>
-    <script src="js/hw2_treeview.js"></script>
+    <script src="js/hw1_treeview.js"></script>
     
 </head>
 <body>
