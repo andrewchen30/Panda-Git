@@ -49,7 +49,8 @@ $(document).ready(function () {
 	//get min col index 
 	function getMin() {
 		var minIndex = 0;
-		for (var i = 0; i < 4; i++) {
+		var i = 0;
+		for (i = 0; i < 4; i++) {
 			if (hi[minIndex] > hi[i]) {
 				minIndex = i;
 			}
@@ -60,7 +61,6 @@ $(document).ready(function () {
 	//check needed
 	function checkNeedMore() {
 		shi = window.screen.availHeight + document.body.scrollTop;
-
 		if ((hi[getMin()] + 400) <= shi) {
 			return true;
 		} else {
@@ -68,17 +68,17 @@ $(document).ready(function () {
 		}
 	}
 
-	function topBarSize(ctrl) {
-		
+	//switch between bigbar and smallbar 
+	function topBarSize() {
 		var add = '+=16px';
 		var sub = '-=16px';
-		
-		if(ctrl === false){
+
+		if (isBigBar === false) {
 			var tmp = sub;
 			sub = add;
 			add = tmp;
 		}
-		
+
 		//bar 
 		$("#topbar").animate({
 			marginTop: sub
@@ -102,16 +102,19 @@ $(document).ready(function () {
 
 	//scroll envent
 	$(document).scroll(function () {
+
+		//waterfall show
 		if (checkNeedMore() && (adding == false)) {
 			adding = true;
 			addTable(flag);
 		}
 
+		//top bar
 		if ((document.body.scrollTop > 400) && isBigBar) {
-			topBarSize(isBigBar);
+			topBarSize();
 			isBigBar = false;
 		} else if ((document.body.scrollTop < 400) && isBigBar == false) {
-			topBarSize(isBigBar);
+			topBarSize();
 			isBigBar = true;
 		}
 	});
