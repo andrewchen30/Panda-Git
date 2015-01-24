@@ -1,33 +1,63 @@
-#linkbar {
-	height: 40px;
+.bar {
+	height: 60px;
+	background-color: #42bfdd;
 	width: 100%;
-	padding-top: 4px;
-	padding-left: 200px;
-	background-color: #228130;
 }
 
-#linkbarInfo {
-	opacity: 0;
-}
-
-.root {
-	margin-top: 8px;
-	font-size: 22px;
+.btn {
 	float: left;
-	width: 100px;
-	margin-left: 12px;
-	color: white;
+	width: 120px;
+	height: 34px;
+	margin-top: 3px;
+	margin-left: 22px;
+	background-color: #407cdd;
 	text-align: center;
+	padding-top: 20px;
+	cursor: pointer;
 }
 
-.child{
-	margin-top: 10px;
-	text-align: center;
+.info {
+	width: 100%;
+	height: 1000px;
+	margin-top: 4px;
+	background-color: #ddb340;
+}
+
+.list {
 	position: relative;
-	top: 10px;
-	font-size: 18px;
-	float: left;
-	width: 100px;
-	margin-left: 12px;
-	color: white;
+	top: 18px;
+	left: 0px;
+	width: 120px;
+	text-align: center;
+	background-color: #5e40dd;
+	cursor: pointer;
+}
+
+.list>div {
+	padding-top: 4px;
+	margin-bottom: 4px;
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+.list>div:hover {
+	background-color: rgba(250, 250, 250, 0.36);
+}
+
+.list>div>.list:first-child {
+}
+
+.list>div>.list {
+	position: absolute;
+	top: -20px;
+	left: 120px;
+}
+
+.ray {
+	width: 70px;
+	height: 300px;
+	position: fixed;
+	top: 30px;
+	left: calc(100% - 70px);
+	background-color: #eb8181;
 }
