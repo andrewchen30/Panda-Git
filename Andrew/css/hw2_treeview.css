@@ -1,0 +1,36 @@
+body{
+            background-color: #333;
+        }
+        div.depart, div.th{
+            border: 2px solid white;
+        }
+        .depart{
+            background-color: #2a7e11;
+            height: 30px;
+            width: 120px;
+            text-align: center;
+            margin: 2px;
+            padding-top: 10px;
+            cursor: pointer;
+        }
+        
+        /*找class*/
+        .th{
+            background-color: #3f85c1;
+            height: 26px;
+            width: 120px;
+            text-align: center;
+            margin: 2px;
+            padding-top: 10px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+        
+        /*找id*/
+        #closeAll{
+            background-color: #b6c732;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            cursor: pointer;
+        }

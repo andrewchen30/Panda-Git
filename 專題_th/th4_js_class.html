@@ -2,50 +2,49 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    
-    <script src="js/jquery-2.1.3.min.js"></script>
-    
-    <style>
-        body {
-            background-color: #333;
-            margin: 0px;
-        }
-        #show {
-            background-color: #19882e;
-            height: 100px;
-            width: 100px;
-            margin: 10px;
-            
-        }
-        .big{
-            border: 2px solid white;
-/*
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script src="../jquery-2.1.3.min.js"></script>
+	<style>
+		body {
+			background-color: #333;
+			margin: 0px;
+		}
+		
+		#show {
+			background-color: #19882e;
+			height: 100px;
+			width: 100px;
+			margin: 10px;
+		}
+		
+		.big {
+			border: 2px solid white;
+			/*
             opacity: 0.8;
             margin-top: 3px;
             margin-left: 3px;
 */
-        
-        }
-    </style>
+		}
+	</style>
 
 
-    <script>
-        $(document).ready(function(){
-            $("div#show").hover(function(){
-                $(this).addClass("big");
-            },function(){
-                $(this).removeClass("big");
-            });
-        });
-    </script>
+	<script>
+		$(document).ready(function () {
+			$("div#show").hover(function () {
+				$(this).addClass("big");
+			}, function () {
+				$(this).removeClass("big");
+			});
+		});
+	</script>
 
 
 </head>
 
 <body>
-    <div id="show"></div>
+	<div id="show"></div>
 </body>
 
 </html>
