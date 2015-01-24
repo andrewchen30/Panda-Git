@@ -1,36 +1,67 @@
-body{
-            background-color: #333;
-        }
-        div.depart, div.th{
-            border: 2px solid white;
-        }
-        .depart{
-            background-color: #2a7e11;
-            height: 30px;
-            width: 120px;
-            text-align: center;
-            margin: 2px;
-            padding-top: 10px;
-            cursor: pointer;
-        }
-        
-        /*找class*/
-        .th{
-            background-color: #3f85c1;
-            height: 26px;
-            width: 120px;
-            text-align: center;
-            margin: 2px;
-            padding-top: 10px;
-            margin-left: 20px;
-            cursor: pointer;
-        }
-        
-        /*找id*/
-        #closeAll{
-            background-color: #b6c732;
-            height: 20px;
-            width: 20px;
-            text-align: center;
-            cursor: pointer;
-        }
+body {
+	background-color: #333;
+}
+
+div.depart,
+div.th {
+	border: 2px solid white;
+}
+
+.depart {
+	background-color: #2a7e11;
+	height: 30px;
+	width: 120px;
+	text-align: center;
+	margin: 2px;
+	padding-top: 10px;
+	cursor: pointer;
+}
+/*找class*/
+
+.th {
+	background-color: #3f85c1;
+	height: 26px;
+	width: 120px;
+	text-align: center;
+	margin: 2px;
+	padding-top: 10px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+/*找id*/
+
+#closeAll {
+	background-color: #b6c732;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+div#treeview{
+	float: left;
+	width: 200px;
+}
+div#show{
+	float: left;
+	width: calc(100% - 200px);
+	padding-top: 60px;
+}
+.thc{
+	opacity: 0;
+	margin-left: 200px;
+	padding-top: 12px;
+	margin-top: 4px;
+	width: 50%;
+	height: 60px;
+	border-radius: 4px;
+	background-color: #2a7e11;
+	color: white;
+}
+.thc>h3{
+	margin-top: 0px;
+	margin-left: 8px;
+}
+.thc>p{
+	margin-top: -10px;
+	margin-left: 16px;
+}

@@ -2,11 +2,11 @@
 
     $id = $_GET["id"];
     $comm = 'SELECT * 
-                FROM `employee` 
-                WHERE `DID` = @DID';
+				FROM `classes`,`courses`
+				WHERE `EID` = "@EID"
+					and `CNO` = `NO`';
 
-    $comm = str_replace('@DID', $id, $comm);
-
+    $comm = str_replace('@EID', $id, $comm);
 
     $link = require("../unites/sql_conn.php");
     $result = mysqli_query($link, $comm);
