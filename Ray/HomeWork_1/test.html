@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-2.1.3.min.js"></script>
+</head>
+
+
+<body>
+<script>
+    $(document).ready(function () {
+       $.ajax({
+            type: "get",
+            url: "classes.php",
+            data: {
+                id: "E1OO1"
+            },
+            success: function (date) {
+                $("body").append(date);
+                var info = JSON.parse(date);
+            }
+        });
+    });
+</script>
+</body>
+
+</html>
