@@ -15,25 +15,29 @@
     </style>
 
 </head>
+<script>
+    $(document).ready(function () {
+        var i = 1;
+        setInterval(function () {
+            //更換圖片
+            $('img#show').fadeOut(500, function () {//確定消失以後才可以換圖片
+                $('img#show').attr('src','img/'+i.toString()+'.jpg').fadeIn(500);//更換圖片顯示
+            });
+            if(i==7)
+            {
+                i=0;
+            }
+            else
+            {
+                i++;
+            }
+        },3000);
+    });
+</script>
 
 <body>
     <div class="bg">
-        <script>
-            $(document).ready(function () {
-                
-                var img = '<div class="con"><a href="#"><img src="img/1.jpg"/></a></div>';
-                $(".con").fadeIn(2000);
-                $(".con").attr("arc=img/2.jpg");
-                $(".con").fadeIn(2000);
-//                for (var i = 0; i < 8; i++) {
-//                    var temp = img;
-//                    temp = img.replace('@chg', i, temp).replace('@id',i,temp);
-//                    $(".bg").append(temp);
-//                    $(".con").fadeIn(2000);
-//                    $(".con").fadeOut(2000);                    
-//                }
-            });
-        </script>
+        <img id="show" src="img/0.jpg" alt="">
     </div>
 
 </body>
