@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery-2.1.3.min.js"></script>
+    <style>
+        .bg {
+            width: 1024px;
+            height: 768px;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bg">
+        <script>
+            $(document).ready(function () {
+                
+                var img = '<div class="con"><a href="#"><img src="img/1.jpg"/></a></div>';
+                $(".con").fadeIn(2000);
+                $(".con").attr("arc=img/2.jpg");
+                $(".con").fadeIn(2000);
+//                for (var i = 0; i < 8; i++) {
+//                    var temp = img;
+//                    temp = img.replace('@chg', i, temp).replace('@id',i,temp);
+//                    $(".bg").append(temp);
+//                    $(".con").fadeIn(2000);
+//                    $(".con").fadeOut(2000);                    
+//                }
+            });
+        </script>
+    </div>
+
+</body>
+
+</html>
