@@ -7,11 +7,10 @@ $(document).ready(function () {
 	}, function () {
 		$(this).children(".list").slideUp('fast');
 	});
-	
+
 	$(".list>div").hover(function () {
 		$(this).children(".list").slideDown('fast');
 	}, function () {
 		$(this).children(".list").slideUp('fast');
 	});
-	
 });
