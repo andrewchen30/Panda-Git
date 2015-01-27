@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .right {
+        height: 120px;
+        width: 100px;
+        background-color: #37d7eb;
+        position: absolute;
+        top: 50px;
+        left: 900px;
+    }
+    
+    .bg {
+        background-color: #c5b7ff;
+        width: calc(100%);
+        height: 1000px;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+                $("div").hover(function () {
+                    $(".right").animate({
+                        marginLeft: "+=500px"
+                    });
+                });
+</script>
+
+<body>
+    <div class="bg">
+        <div class="right"></div>
+    </div>
+</body>
+
+</html>
