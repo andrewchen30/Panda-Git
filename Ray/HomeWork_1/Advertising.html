@@ -24,17 +24,25 @@
 </style>
 <script>
     $(document).ready(function () {
-                $("div").hover(function () {
-                    $(".right").animate({
-                        marginLeft: "+=500px"
-                    });
-                });
+        $('.bg').append('等十秒跳至google');
+        setInterval(function () {
+            $('.bg').append('*');
+        }, 1000);
+        setInterval(function () {
+            location.href = ('http://google.com.tw ');
+        }, 10000);
+        //                $("div").hover(function () {
+        //                    $(".right").animate({
+        //                        marginLeft: "+=500px"
+        //                    });
+    });
 </script>
 
 <body>
     <div class="bg">
         <div class="right"></div>
     </div>
+
 </body>
 
 </html>
