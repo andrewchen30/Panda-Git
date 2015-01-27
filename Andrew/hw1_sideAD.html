@@ -25,9 +25,15 @@
 
 
 	<script>
+		
+		$(document).scroll(function(){
+			$('body').append('*');
+		});
+		
+		
 		$(document).ready(function () {
 			var ctrl = true;
-			setInterval(function () {
+			setInterval(function () { //每0.1秒做一次
 				if (ctrl) {
 					ctrl = false;
 					$('.ad').animate({

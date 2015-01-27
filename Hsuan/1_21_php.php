@@ -1,5 +1,7 @@
 <?php
      $id=$_GET["id"];
+
+
      $link=require("connect.php");
 
      $info=array();

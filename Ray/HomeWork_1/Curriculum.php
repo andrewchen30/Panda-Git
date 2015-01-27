@@ -124,6 +124,7 @@
 </head>
 
 <body>
+  <div id="con" class="body2"></div>
    <div class="left">
     <div id="closeall">-</div>
     <?php $departStr='<div id="@departID" class="depart">@departName</div><div class="water"></div>';
@@ -139,7 +140,7 @@
         }
     ?>
     </div>
-    <div id="con" class="body2"></div>
+    
 </body>
 
 </html>
