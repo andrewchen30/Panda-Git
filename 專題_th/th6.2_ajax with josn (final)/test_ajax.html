@@ -19,6 +19,8 @@
 				},
 				success: function (data) {
 
+					$("body").append(data);
+					
 					var info = JSON.parse(data);
 					var thInfo = '<div class="th">@thName</div>';
 					//alert(info[0]["Name"]);

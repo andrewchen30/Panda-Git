@@ -73,8 +73,8 @@
                         id: $(view).attr("id")
                     },
                     success: function (data) {
-                        //$("body").append(data);
 
+                        //$("body").append(data);
                         var info = JSON.parse(data);
                         var thInfo = '<div class="th">@thName</div>';
                         //alert(info[0]["Name"]);
@@ -83,6 +83,7 @@
                             var tmp = thInfo.replace('@thName', info[i]["Name"]);
                             $(view).next().append(tmp);
                         }
+						
                     }
                 });
                 
