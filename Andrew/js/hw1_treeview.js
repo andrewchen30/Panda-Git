@@ -57,9 +57,9 @@ $('body, html').on('click', 'div.th', function () {
 			var thInfo = '<div class="thc"><h3>[@name]</h3><p>@weekday@time&nbsp;&nbsp;@grade學分</p></div>';
 			//alert(info[0]["Name"]);
 
-
 			$("#show").html(""); //clear
-			var limit = info.length; //length of info
+			
+			var limit = info.length; //資料的筆數
 
 			var show = function (i) {
 				//make table
@@ -67,6 +67,7 @@ $('body, html').on('click', 'div.th', function () {
 				tmp = tmp.replace('@weekday', info[i]["Weekday"]);
 				tmp = tmp.replace('@time', info[i]["Period"]);
 				tmp = tmp.replace('@grade', info[i]["Grade"]);
+				
 				//show it 
 				$("#show").append(tmp);
 				$("div.thc:last-child").animate({
