@@ -26,7 +26,7 @@
 
 		$link = require("unites/sql_conn.php");
 		$result = mysqli_query($link, "select * from departments");
-
+ 
 		while($rows = mysqli_fetch_assoc($result)){
 			$tmp = $departStr;
 

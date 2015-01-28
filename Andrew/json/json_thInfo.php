@@ -16,7 +16,7 @@
         $info[] = $rows;
     }
 //    echo $info[0]["Name"];
-    $jsonStr = json_encode($info);
+    $jsonStr = json_encode($info); //pirnt json出來
     echo $jsonStr;
 
       
