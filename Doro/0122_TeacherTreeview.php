@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
 
-    <script src="jquery-2.1.3.min.js"></script>
+    <script src="../jquery-2.1.3.min.js"></script>
     <style>
         body {
             background-color: #333;
@@ -34,7 +34,11 @@
             font-size: 15px;
             padding-top: 10px;
             cursor: pointer;
+          
         }
+       div#testt{
+       float:left;
+       }
         .classes{
 /*            border: 2px solid #ff3a3a;*/
             background-color: #00fa9a;
@@ -76,7 +80,10 @@
                    var testId=$(classview).attr("id");
                    var info = JSON.parse(date);
 //                     alert("ajax 成功");
-                     var classShow='<div id="testt" class="classes">開課資訊@no <p> 日期與時間：@date　&nbsp時間：@time <br/>教室：@classroom &nbsp性質：                                                                             @sign &nbsp教科書：@book </div>';
+                     var classShow='<div class="classes">開課資訊@no <p> 日期與時間：@date　&nbsp時間：@time <br/>教室：@classroom &nbsp性質：                                                                             @sign &nbsp教科書：@book </div>';
+                     // 移除開課內容  
+//                     $("#testt").text("");
+                     $("#testt").html("");
                      for(var k=0; k < info.length; k++){
 //                         老師
                          var classtmp=classShow.replace('@no',k+1)
@@ -85,7 +92,8 @@
                                                .replace('@classroom',info[k]["Room"])
                                                .replace('@sign',info[k]["Outline"])
                                                .replace('@book',info[k]["Textbook"]); 
-                         $(classview).append(classtmp);
+                         //插入開課內容
+                         $("#testt").append(classtmp);
                     }
                     alert(info.length);
 //                    slide("#testt");
@@ -181,9 +189,11 @@
              echo $tmp;
        };
 
-       $classShow = '<div id="testt" class="classes"></div>
-                     <div class="classWrapper"></div>';
+//       $classShow = '<div id="testt" class="classes"></div>
+//                     <div class="classWrapper"></div>';
     ?>
+    
+    <div id="testt"></div>
 </body>
 
 </html>
