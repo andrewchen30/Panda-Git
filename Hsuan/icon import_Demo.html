@@ -11,7 +11,7 @@
 </head>
 
 <style>
-   
+/*show為表格css*/
 .show{
    
    
@@ -23,42 +23,46 @@
 
     
 /*星星*/
+    
+.rating {
+  unicode-bidi: bidi-override;
+/*星星往哪一個方向填滿  rtl為左往右*/
+  direction:rtl;
+/*星星位置*/
+  text-align: left;
+  
+}
 .rating > span:hover:before {
+    /*星星圖示的16進制*/
    content: "\2605";
    position: absolute;
     
 }
-.rating {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-  text-align: left;
-  
-}
+
 .rating > span {
-  display: inline-block;
+/*星星排橫的*/
+  display:inline-block;
   position: relative;
+/*每顆星星間距*/
   width: 1.1em;
   /*線條顏色*/
   color: #c01cce;
 }
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
-   content: "\2605";
+   /*星星圖示的16進制*/
+    content: "\2605";
    position: absolute;
   /*填滿顏色*/
    color: #d9d911; 
 }
     
-    
 
-.#{$fa-css-prefix}-stack-1x { line-height: inherit; }
+
+
+
     
-    
-    </style>
-    
-    <script>
-        
-    </script>
+</style>
     
     
     
@@ -81,7 +85,7 @@
 
 
 
-
+<!--正方形-->
 
 <ul class="fa-ul">
   <li><i class="fa-li fa fa-check-square"></i>List icons</li>
@@ -93,7 +97,7 @@
 
 
 
-
+<!--旋轉-->
 <div class="o">
 <i class="fa fa-spinner fa-spin"></i>
 <i class="fa fa-circle-o-notch fa-spin"></i>
@@ -114,7 +118,7 @@
 
 
 
-
+<!--盾牌-->
 <div class="e">
 <i class="fa fa-shield"></i> normal<br>
 <i class="fa fa-shield fa-rotate-90"></i> fa-rotate-90<br>
@@ -125,22 +129,28 @@
 </div>
 
 
-
+<!--推特-->
+<!--fa-stack-1x定期大小圖標 ex.推特的小鳥-->
+<!--fa-stack-2x用於較大圖標 ex.方框-->
+<!--fa-inverse用來作為一種替代圖標的顏色  ex.旗子底是黑色-->
 <span class="fa-stack fa-lg">
   <i class="fa fa-square-o fa-stack-2x"></i>
   <i class="fa fa-twitter fa-stack-1x"></i>
 </span>
 fa-twitter on fa-square-o<br>
+
 <span class="fa-stack fa-lg">
   <i class="fa fa-circle fa-stack-2x"></i>
   <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
 </span>
 fa-flag on fa-circle<br>
+
 <span class="fa-stack fa-lg">
   <i class="fa fa-square fa-stack-2x"></i>
   <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
 </span>
 fa-terminal on fa-square<br>
+
 <span class="fa-stack fa-lg">
   <i class="fa fa-camera fa-stack-1x"></i>
   <i class="fa fa-ban fa-stack-2x text-danger"></i>
@@ -149,16 +159,18 @@ fa-ban on fa-camera
 
 
 
-
+<!--按鈕-->
 <div class="f">
 <a class="btn btn-danger" href="#">
   <i class="fa fa-trash-o fa-lg"></i> Delete</a>
+  
 <a class="btn btn-default btn-sm" href="#">
-  <i class="fa fa-cog"></i> Settings</a>
+  <i class="fa fa-cog"></i> Settings</a></br><p></p>
 
 <a class="btn btn-lg btn-success" href="#">
   <i class="fa fa-flag fa-2x pull-left"></i> Font Awesome<br>Version 4.3.0</a>
-
+  
+<!--靠左靠右-->
 <div class="btn-group">
   <a class="btn btn-default" href="#"><i class="fa fa-align-left"></i></a>
   <a class="btn btn-default" href="#"><i class="fa fa-align-center"></i></a>
@@ -166,15 +178,19 @@ fa-ban on fa-camera
   <a class="btn btn-default" href="#"><i class="fa fa-align-justify"></i></a>
 </div>
 
+<!--信箱-->
 <div class="input-group margin-bottom-sm">
   <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
   <input class="form-control" type="text" placeholder="Email address">
 </div>
+
+<!--密碼-->
 <div class="input-group">
   <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
   <input class="form-control" type="password" placeholder="Password">
 </div>
 
+<!--user下拉選取-->
 <div class="btn-group open">
   <a class="btn btn-primary" href="#"><i class="fa fa-user fa-fw"></i> User</a>
   <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
@@ -187,13 +203,14 @@ fa-ban on fa-camera
     <li><a href="#"><i class="i"></i> Make admin</a></li>
   </ul>
 </div>
+
 </div>
 
 
 
 
 
-
+<!--逗點-->
 <div class="d">
 <i class="fa fa-quote-left fa-3x pull-left fa-border"></i>
 ...tomorrow we will run faster, stretch out our arms farther...
