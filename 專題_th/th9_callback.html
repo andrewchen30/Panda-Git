@@ -29,7 +29,7 @@
 	<script>
 		$(document).ready(function(){
 			$("div").click(function(){
-				$("#two").slideUp('fast', function(){
+				$("#two").slideUp('fast', function(){ //這裡就是callbock
 					$("#one").slideUp('fast');//1
 				});//2    
 			});
