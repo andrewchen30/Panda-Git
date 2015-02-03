@@ -1,0 +1,19 @@
+body{
+	background-color: #333;
+}
+img{
+	opacity: 0;
+	position: absolute;
+	margin-left: 50px;
+	max-height: 200px;
+	max-width: 200px;
+}
+
+.cal{
+	float: left;
+	width: 300px;
+	height: 600px;
+/*	background-color: #c33434;*/
+	border: 2px solid white;
+}
+
