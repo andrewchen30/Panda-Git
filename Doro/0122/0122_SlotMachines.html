@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SlotMachines</title>
+    <!--http://odhyan.com/blog/2011/05/slot-machine-in-javascript/-->
+
+    <!--套javascript套javascript-->
+    <script src="../../jquery-2.1.3.min.js"></script>
+    <!--套bootstrap套bootstrap-->
+    <script src="../../bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../bootstrap-3.3.2-dist/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="../../bootstrap-3.3.2-dist/css/bootstrap.min.css">
+
+    <style>
+        #draw_up {
+            font-size: 20px;
+            float: left;
+            margin-top: 10%;
+            margin-left: 70px;
+            cursor: pointer;
+        }
+        
+        #draw_down {
+            font-size: 20px;
+            float: left;
+            margin-top: 10%;
+            margin-left: 50px;
+            cursor: pointer;
+        }
+        
+        #machine {
+            float: left;
+            left: 30%;
+            top: 20%;
+            height: 400px;
+            width: 680px;
+            margin-left: 100px;
+            margin-top: 100px;
+            background-color: #ff3b3b;
+        }
+        
+        .radWrapper {
+            float: left;
+            height: 250px;
+            width: 590px;
+            margin-left: 50px;
+        }
+
+        #rad1 {
+            /*            position: absolute; left: 30%; top: 20%+100px;*/
+            
+            float: left;
+            height: 180px;
+            width: 180px;
+            margin-top: 5px;
+        }
+        
+        #rad2 {
+            float: left;
+            height: 180px;
+            width: 180px;
+            margin-left: 25px;
+        }
+        
+        #rad3 {
+            float: left;
+            height: 180px;
+            width: 180px;
+            margin-left: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="table">
+        <span id="draw_up" class="label label-primary">START</span>
+        <span id="draw_down" class="label label-success">STOP</span>
+    </div>
+    <div id="machine" class="mLayout">
+        <div class="radWrapper">
+            <img id="rad1" src="SlotMachine/rila_1.png" width="50%">
+            <img id="rad2" src="SlotMachine/rila_1.png" width="50%">
+            <img id="rad3" src="SlotMachine/rila_1.png" width="50%">
+        </div>
+    </div>
+
+    <script>
+        //setInterval
+        var time1;
+        var time2;
+        var time3;
+        //目前圖的index
+        var k1;
+        var k2;
+        var k3;
+        //抓index，判斷輸贏用
+        var getP1;
+        var getP2;
+        var getP3;
+
+        //1
+        function startrad1() {
+            alert("GAME STARE");
+            k1 = 1;
+            time1 = setInterval(function () {
+                $("#rad1").attr('src', 'SlotMachine/rila_' + k1.toString() + '.png').animate({
+                    marginTop: "200px"
+                }, 300, "swing").fadeOut(300, function () {
+                    $("#rad1").attr('src', 'SlotMachine/rila_' + k1.toString() + '.png').animate({
+                        marginTop: "-5px"
+                    }, 300, "swing").fadeIn(300);
+                });
+
+                if (k1 == 5) {
+                    k1 = 1;
+                } else {
+                    k1++;
+                };
+                getP1 = k1;
+                //                alert("getP1_2=" + getP1);
+            }, 1000);
+        };
+
+        //2
+        function startrad2() {
+            //            alert("GAME STARE");
+            k2 = 4;
+            time2 = setInterval(function () {
+                $("#rad2").attr('src', 'SlotMachine/rila_' + k2.toString() + '.png').animate({
+                    marginTop: "200px"
+                }, 300, "swing").fadeOut(300, function () {
+                    $("#rad2").attr('src', 'SlotMachine/rila_' + k2.toString() + '.png').animate({
+                        marginTop: "-5px"
+                    }, 300, "swing").fadeIn(300);
+                });
+
+                if (k2 == 5) {
+                    k2 = 1;
+                } else {
+                    k2++;
+                };
+            }, 1000);
+        };
+        //3
+        function startrad3() {
+            //            alert("GAME STARE");
+            k3 = 5;
+            time3 = setInterval(function () {
+                $("#rad3").attr('src', 'SlotMachine/rila_' + k3.toString() + '.png').animate({
+                    marginTop: "200px"
+                }, 300, "swing").fadeOut(300, function () {
+                    $("#rad3").attr('src', 'SlotMachine/rila_' + k3.toString() + '.png').animate({
+                        marginTop: "-5px"
+                    }, 300, "swing").fadeIn(300);
+                });
+
+                if (k3 == 5) {
+                    k3 = 1;
+                } else {
+                    k3++;
+                };
+            }, 1000);
+        };
+        //stop
+        function stop() {
+            //            alert("GAME STOP");
+            clearInterval(time1);
+            clearInterval(time2);
+            clearInterval(time3);
+
+            if (k1 == k2 == k3) {
+                alert("You Win");
+            } else {
+                //                alert(k1 + "," + k2 + "," + k3);
+                alert("Yor lose");
+            };
+        };
+
+        //    <!--    文件開始-->
+        $(document).ready(function () {
+            $("#draw_up").click(function () {
+                startrad1();
+                startrad2();
+                startrad3();
+            });
+
+            $("#draw_down").click(function () {
+                stop(k1, k2, k3);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

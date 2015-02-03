@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<!--用點的去換圖片,範例-->
+<!--http://www.flycan.com/article/javascript/jquery-attr-1542.html-->
+
+	<meta charset="UTF-8">
+	<title>ImageCarousel</title>
+	<script src="../../jquery-2.1.3.min.js"></script>
+	<style>
+		img#img {
+			border: 2px solid white;
+			position: absolute;
+			left: 30%;
+			top: 20%;
+		}
+	</style>
+	<script>
+//		var Rila_img = new Array();
+//		Rila_img[0] = '<img src="ImageCarousel/rila_1.jpg" width="50%">';
+//		Rila_img[1] = '<img src="ImageCarousel/rila_2.jpg" width="50%">';
+//		Rila_img[2] = '<img src="ImageCarousel/rila_3.jpg" width="50%">';
+
+		$(document).ready(function () {
+            
+            //1. 一個 setInterval 事件
+            var k = 1;
+            
+            setInterval(function(){  
+                
+                //2. 圖片消失
+                $('img#img').fadeOut(500,function(){
+                    
+                    //3. 換圖
+                    $('img#img').attr('src','ImageCarousel/rila_'+k.toString()+'.jpg').fadeIn(500);
+//                    $('img#img').show(Rila_img[k]).fadeIn(500);
+                });
+                
+                //4. 判斷是否超出陣列
+                if(k == 3){
+                    k = 1;
+                }else{
+                    k++;
+                };
+                
+            },3000); //500 ,800 ,3000-500-800=1700
+		
+			//1.寫一個interval 每隔一段時間執行一次
+			//2.讓圖片消失 
+			//3. call back 換圖  圖片顯示
+			//4.判定index是否加1或是回到0嗎？？
+			
+		});
+	</script>
+</head>
+
+<body>     
+    <img id="img" src="ImageCarousel/rila_1.jpg" width="50%">
+</body>
+
+</html>
