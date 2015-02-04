@@ -1,10 +1,13 @@
 $(document).ready(function () {
 
+	
+	
 	startAt(1);
-	startAt(2);
-	startAt(3);
+	
+	setTimeout(startAt(2), 2000);
+	setTimeout(startAt(3), 4000);
 
-	function startAt(num) {
+	function startAt(num) {  
 		var ctrl = true;
 		var box = $('#cal' + num.toString());
 
