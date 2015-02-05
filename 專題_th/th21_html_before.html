@@ -19,41 +19,46 @@
 			margin-right: auto;
 		}
 		
-		.money:before{
+		.money:before {
 			color: yellow;
 			font-size: 32px;
 			content: "$NT  ";
 		}
-		.money:after{
+		
+		.money:after {
 			color: red;
 			content: " -.";
 		}
 		
-		.triagle{
-			width: 50px;
-			height: 50px;
-			background-color: #f21b1b;
-			
-			border-top: 50px solid #58b228;
-			border-bottom:  50px solid #58b228;
-			border-left:  50px solid #58b228;
-			border-right:  50px solid #58b228;
-			
-			
-			
+		.talk {
+			position: relative;
+			width: 300px;
+			height: 150px;
+			background-color: #318451;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 20px;
 		}
 		
-		
+		.talk:before {
+			content: "";
+			position: absolute;
+			top: 30px;
+			right: 100%;
+			width: 0px;
+			height: 0px;
+			border-top: 30px solid rgba(88, 178, 40, 0);
+			border-bottom: 30px solid rgba(88, 178, 40, 0);
+			border-left: 50px solid rgba(88, 178, 40, 0);
+			border-right: 50px solid #318451;
+		}
 	</style>
 
 </head>
 
 <body>
 	<div class="money">1,000</div>
-	
-	<div class="triagle"></div>
-	
-	
+	<div class="talk"></div>
 </body>
 
 </html>
