@@ -15,24 +15,29 @@
 
 	<style>
 		.ani {
-			-webkit-animation-duration: 3s;
+			-webkit-animation-duration: 4s;
+			/*動畫執行的秒數*/
+			
 			-webkit-animation-name: slidein;
+			/*動畫名稱*/
+			
 			-webkit-animation-iteration-count: infinite;
-			/*執行次數*/
+			/*執行次數   infinite ＝ 無限次 */
 			
 			-webkit-animation-direction: alternate;
+			/*重複的時候, 是“返回” 不是“重頭開始”*/
 		}
 		
 		@-webkit-keyframes slidein {
 			from {
 				padding-left: 100%;
-				width: 300%;
+				width: 100%;
 			}
 			/*關鍵影格*/
 			
 			50% {
 				font-size: 300%;
-				padding-left: 25%;
+				padding-left: 30%;
 				width: 150%;
 			}
 			to {
