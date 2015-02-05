@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		
+		//defined on parse time
+		function show(){
+			alert('hi');
+		}
+		
+		
+		show2();
+		
+		
+		//defind on run time
+		var show2 = new function(){
+			alert('hi this is show 2');
+		};
+		
+		$('').fadeIn(300, function(){
+			
+		});
+
+		
+		$('html, body').on('click', 'div', function(){
+			
+		});
+		
+	</script>
+</body>
+</html>

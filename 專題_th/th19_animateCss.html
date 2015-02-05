@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Animate css</title>
 	<link rel="stylesheet" href="../animate.css">
+	<script src="../jquery-2.1.3.min.js"></script>
+
+	<script>
+//		$(document).ready(function () {
+//			var view = $('div#panda');
+//			$('button').click(function () {
+//				$(view).toggleClass('animated fadeInLeft').toggleClass('animated fadeOutRight');
+//			});
+//		});
+//		
+		
+		$('html, body').on('click', 'button', function(){
+			$('div#panda').toggleClass('animated fadeInLeft').toggleClass('animated fadeOutRight');
+		});
+		//console.log('remove animate class');
+	</script>
+
 	<style>
-		body{
+		body {
 			background-color: #333;
 		}
-		div{
+		
+		div#panda {
 			width: 200px;
 			height: 120px;
 			background-color: #247440;
@@ -17,6 +36,8 @@
 </head>
 
 <body>
-	<div class="animated fadeInLeft"></div>
+	<div id="panda" class="animated fadeInLeft"></div>
+	<button>click me</button>
 </body>
+
 </html>
