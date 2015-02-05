@@ -10,33 +10,50 @@
 			background-color: #333;
 		}
 		
-		div {
+		.money {
+			color: white;
+			width: 200px;
+			text-align: center;
 			height: 100px;
-			width: 100px;
-/*
 			margin-left: auto;
 			margin-right: auto;
-*/
-			background-color: #31813e;
-			text-align: center;
 		}
-		div:after{
-			content: "";
-			height: 100px;
-			width: 100px;
-			background-color: #d9e635;
-/*			margin-left: 100px;*/
-			position: relative;
-			top: 0px;
-			left: 100px;
+		
+		.money:before{
+			color: yellow;
+			font-size: 32px;
+			content: "$NT  ";
 		}
+		.money:after{
+			color: red;
+			content: " -.";
+		}
+		
+		.triagle{
+			width: 50px;
+			height: 50px;
+			background-color: #f21b1b;
+			
+			border-top: 50px solid #58b228;
+			border-bottom:  50px solid #58b228;
+			border-left:  50px solid #58b228;
+			border-right:  50px solid #58b228;
+			
+			
+			
+		}
+		
 		
 	</style>
 
 </head>
 
 <body>
-	<div>test</div>
+	<div class="money">1,000</div>
+	
+	<div class="triagle"></div>
+	
+	
 </body>
 
 </html>
