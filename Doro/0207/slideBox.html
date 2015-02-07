@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SlideBox</title>
+    <script src="../../jquery-2.1.3.min.js"></script>
+
+    <style>
+        body {
+            height: 1000px;
+        }
+        
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: calc(100% - 100px);
+            background-color: #f00;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--   http://blog.johnsonlu.org/jquery%E9%9A%A8%E8%91%97%E6%8D%B2%E8%BB%B8%E7%A7%BB%E5%8B%95%E7%9A%84%E8%A6%96%E7%AA%97/-->
+    <!--    http://www.eion.com.tw/Blogger/?Pid=1154-->
+
+    <div class="box"></div>
+    <script>
+        $(document).ready(function () {
+            //視窗物件
+            var win = $(window);
+
+            //加上scroll事件
+            win.on('scroll', function () {
+                var $this = $(this);
+
+                //設定位置
+                $('.box').stop().animate({
+                    top: $this.scrollTop(),
+                }, 1000, 'swing');
+            }).scroll(); //叫scroll
+        });
+    </script>
+</body>
+
+</html>
