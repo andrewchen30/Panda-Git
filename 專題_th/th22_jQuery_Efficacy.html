@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<script src="../jquery-2.1.3.min.js"></script>
+	<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>-->
+
+	<!--
+	<script type="text/javascript">
+		/*加載jQuery v2.1.3 */ 
+		google.load ("jquery", "2.1.3", {uncompressed: false}); 
+	</script>
+-->
+
+</head>
+
+<body>
+	<script>
+		//(1)---------------------
+		//for, append
+		var str = "";
+		var ary = new Array();
+
+		for (var i = 0, l = ary.length; i < l; i++) { //只抓取一次ary.length
+			str += i.toString();
+		}
+		$('body').append(str); //最後一次append進去
+		//沒必要的話, 不要使用 $.each()
+
+
+		//(2)---------------------
+		var PI = {
+			onReady: function () {
+				$('#magic').click(PI.candyMtn);
+				$('#happiness').load(url + ' #unicorns', PI.unicornCb);
+			},
+			candyMtn: function (e) {
+				$('#yayeffects').slideUp(PI.slideCb);
+			},
+			slideCb: function () {;
+			},
+			unicornCb: function () {;
+			}
+		}
+		$(document).ready(PI.onReady);
+
+
+		//(3)---------------------
+		//非常快
+		$('#container div.robotarm');
+		//超級快
+		$('#container').find('div.robotarm'); //純id是最快的, 不需要經過css selector的引擎處理
+
+
+
+		//(4)---------------------
+		//不好(如果列表裡面元素很多會很慢) 
+		$('li.trigger').click(handlerFn);
+		//較好的: event delegation with $.fn.live 
+		$('li.trigger').live('click', handlerFn);
+		//最優的: $.fn.delegate 
+		$('#myList').delegate('li.trigger', 'click', handlerFn); //類似使用on？？
+
+
+		//(5)---------------------
+		$('.buttons > *'); //極慢
+		$('.buttons').children(); //快很多
+		$('.gender :radio'); //誰知道你要找什麼
+		$('.gender *:radio'); //同上
+		$('.gender input:radio'); //這樣好很多  至少先找input
+
+		//(6)---------------------
+		//當要套用css的東西多餘20個的時候
+		$('a.swedberg').css('color', '#asd123');
+		$('<style type="text/css">a.swedberg { color : #asd123 }</style>').appendTo('head');
+
+
+		//(7)---------------------
+		//太遭了，執行了三個方法後才意識到裡面是空的
+		$('#nosuchthing').slideUp(); //較好var 
+		$mySelection = $('#nosuchthing');
+		if ($ mySelection.length) {
+			mySelection.slideUp();
+		}
+		//最佳: add a doOnce plugin 
+		jQuery.fn.doOnce = function (func) {
+			this.length && func.apply(this);
+			return this;
+		}
+		$(' li.cartitems').doOnce(function () {
+			// make it ajax! \o/ 
+		}); //這層保護是適用於jQuery UI widget，因為即使操作的元素為空其開銷也不少。
+
+		//(8)------------------
+		//舊方法
+		if (type == 'foo' || type == 'bar') {...
+		} //好方法
+		if (/^(foo|bar)$/.test(type)) {...
+		} //查找對象
+		if (({
+				foo: 1,
+				bar: 1
+			})[type]) {...
+		}
+	</script>
+</body>
+
+</html>

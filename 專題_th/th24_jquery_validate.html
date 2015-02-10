@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>jquery validate</title>
+	<script src="../jquery-2.1.3.min.js"></script>
+	<script src="../jquery-validation-1.13.1/"></script>
+</head>
+
+<body>
+
+	<!--教學文件: http://jqueryvalidation.org/documentation/-->
+	<form class="cmxform" id="commentForm" method="get" action="">
+		<fieldset>
+			<legend>Please provide your name, email address (won't be published) and a comment</legend>
+			<p>
+				<label for="cname">Name (required, at least 2 characters)</label>
+				<input id="cname" name="name" minlength="2" type="text" required>
+			</p>
+			<p>
+				<label for="cemail">E-Mail (必填)</label>
+				<input id="cemail" type="email" name="email" required>
+			</p>
+			<p>
+				<label for="curl">URL (選擇)</label>
+				<input id="curl" type="url" name="url">
+			</p>
+			<p>
+				<label for="ccomment">建議 (必填)</label>
+				<textarea id="ccomment" name="comment" required></textarea>
+			</p>
+			<p>
+				<input class="submit" type="submit" value="Submit">
+			</p>
+		</fieldset>
+	</form>
+	<script>
+		$("#commentForm").validate();
+	</script>
+
+	<!--
+	required：必填欄位
+	email：格式要符合E-Mail格式
+	url：格式要符合網址格式，如：http://www.minwt.com
+	number：數字格包含小數點
+	digits：數字為正整數
+	date：日期格式
+	dateISO：日期格式，格式必需為YYYY/MM/DD、YYYY-MM-DD、YYYYMMDD
+	equalTo：與某一欄位值相同
+
+	minValue：最小字元長度
+	maxValue：最大字元長度
+	rangeValue：字元長度區間長度
+
+	minLength：最小字元長度(漢字算一個字符)
+	maxLength：最大字元長度(漢字算一個字符)
+	rangeLength：字元長度區間長度(漢字算一個字符)
+-->
+</body>
+
+</html>
