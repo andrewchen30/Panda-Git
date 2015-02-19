@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Pic Show</title>
+
+	<!--css-->
+	<style>
+		body {
+			background-color: #333;
+		}
+		
+		img#show {
+			width: 400px;
+		}
+	</style>
+
+	<!--script-->
+	<script src="../jquery-2.1.3.min.js"></script>
+	<script>
+		$(document).ready(function () {
+
+			var index = 2;
+
+			setInterval(function () {
+				//更換圖片
+				$('img#show').fadeOut(300, function () {
+					$('img#show').attr('src', 'img/fox' + index.toString() + '.jpg').fadeIn(500); //換圖片 然後顯示出來
+				});
+
+				//圖片總共有七張 fox1.jgp~fox7.jpg
+				if (index == 7) {
+					index = 1;
+				} else {
+					index++;
+				}
+			}, 2600); //消失300  顯示500  2600 -300 -500 = 1800 圖片會顯示1.8秒
+		});
+	</script>
+</head>
+
+<body>
+	<img id="show" src="img/fox1.jpg" alt="">
+	
+	<!--main area-->
+	<div class="wrapper">
+		<div>
+			<div>
+				<img src="" alt="">
+				<p></p>
+				<span>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div>
+					<div></div></span>
+			</div>
+		</div>
+	</div>
+	<!--main area end-->
+		
+</body>
+
+</html>

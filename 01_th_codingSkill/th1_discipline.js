@@ -8,7 +8,7 @@ $(document).ready(function () {
 	//alert('test');
 });
 
-$('html, body').on('click', '.show', function(){
+$('html, body').on('click', '.show', function () {
 	console.log('btn.show click');
 });
 
@@ -18,3 +18,5 @@ $('html, body').on('click', '.show', function(){
 //alert在測試後需要註解掉或刪除, console.log不需要
 //console.log最大的優點在於日後可以觀測事件方生的順序
 //==================================================
+
+//當然可以把log 寫到檔案裡面, 留下記錄黨
