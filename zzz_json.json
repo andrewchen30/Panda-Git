@@ -1,0 +1,111 @@
+{
+    //一整支程式
+    "newName": "birth1025",
+    "newVar": {
+        "varName": "birth1025",
+        "varDo": "=0",//要包東西
+        "doMain": {
+            "globalCheck": {
+                "isGlobal": "isTure"
+            },
+            "areaCheck": {
+                "isArea": "isfalse"
+            }
+        }
+    },
+    "runWile": {
+        "showAlter": {
+            "showStr": "tmp=",
+            "showWho": "birth1025",
+        },
+        "runIf": {
+            "findWho": "birth1025",
+            "whoDo": ">=100",
+            "isTrue": {
+                "trueDo": "breeak"
+            },
+            "isFlalse": {
+                "findWho": "birth1025",
+                "whoDo": "+=10"
+            }
+        }
+    },
+    "showAlter": {
+        "showStr": "finish"
+    }
+}
+
+
+
+{ //跳轉頁面
+    "jumpHeader": "homepage.html"
+}
+
+
+
+{
+    "newFunctionNanme": "birt0326",
+    "newFunction": {
+        //省略中間程式碼
+        "findWho": "birt0123",
+        "findWhoReturn": "birt0123"
+    },
+    "findFunctionName": "birt0123",
+}
+
+
+
+{
+    //get post
+    "convey": {
+        "privacy": {
+            "isPrivacy": {
+                "runGet": {
+                    "findWhoGet": "birth1025"
+                }
+            },
+            "notPrivacy": {
+                "runPost": {
+                    "findWhoPost": "birth1025"
+                }
+            }
+        }
+    }
+},
+
+
+
+{
+    "scratch": {
+        "isClient": {
+            //cookic
+            "startCookic": {
+                "newName": "user223",
+                "newVar": {
+                    "varName": "user223",
+                    "varDo": "OK",
+                    "runTime": "+3600"
+                }
+            }
+        },
+        "isServer": {
+            //Session
+            "startSession": {
+                "newName": "number123",
+                "newVar": {
+                    "varName": "number123",
+                    "varDo": "=10",
+                }
+            }
+        }
+    },
+
+    //呼叫Session
+    "startSession": {
+        "findSession": "number123"
+    },
+    //呼叫cookic
+    "findCooic": {
+        "findWhoCookic": "user123"
+    }
+}
